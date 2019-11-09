@@ -10,6 +10,8 @@ in turn user will be prompted to input a number from 8-128.<br>
 
 after user will be asked to confirm if numbers, symbols, UpperCase Letters, and/or LowerCase letters will be used for their unique password.<br>
 
+Once password is generated user has option to copy password to clipboard by clicking on Copy button.<br>
+
 This version uses confirm box to get essentially a yes or no from the user.<br>
 
 Future versions will use different methods to get the users input.
