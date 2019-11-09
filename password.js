@@ -6,10 +6,83 @@ document.getElementById("Generate").addEventListener("click",function(){
     var upperCaseLetters = confirm("Do you want to use upper case letters?");
     var lowerCaseLetters = confirm("Do you want to use lower case letters?");
     finalPass=""; 
-    if(num1,symbols,upperCaseLetters,lowerCaseLetters==true){
+    if(num1===true &&symbols===true && upperCaseLetters===true && lowerCaseLetters==true){
         for(i=0; i< length1; i++){
             finalPass= finalPass+getLowerCase()+getRandomNum()+getSymbols()+getUpperCase();
         }
+    }
+    else if(num1===false && symbols===false && upperCaseLetters===false && lowerCaseLetters===true) {
+       for(i=0; i< length1; i++){
+          finalPass= finalPass + getLowerCase();
+       }
+    }
+    else if(num1===false && symbols===false && upperCaseLetters===true && lowerCaseLetters===true) {
+       for(i=0; i< length1; i++){
+          finalPass= finalPass + getLowerCase()+getUpperCase();
+       }
+    }
+    else if(num1===false && symbols===true && upperCaseLetters===true && lowerCaseLetters===true) {
+       for(i=0; i< length1; i++){
+          finalPass= finalPass + getLowerCase()+getUpperCase()+getSymbols();
+       }
+    }
+    else if(num1===false && symbols===true && upperCaseLetters===false && lowerCaseLetters===true) {
+       for(i=0; i< length1; i++){
+          finalPass= finalPass + getLowerCase()+getSymbols();
+       }
+    }
+    else if(num1===true && symbols===false && upperCaseLetters===false && lowerCaseLetters===true) {
+       for(i=0; i< length1; i++){
+          finalPass= finalPass + getLowerCase()+getRandomNum();
+       }
+    }
+    else if(num1===true && symbols===false && upperCaseLetters===true && lowerCaseLetters===false) {
+       for(i=0; i< length1; i++){
+          finalPass= finalPass + getRandomNum()+ getUpperCase();
+       }
+    }
+    else if(num1===true && symbols==true && upperCaseLetters===true && lowerCaseLetters===false) {
+       for(i=0; i< length1; i++){
+          finalPass= finalPass + getRandomNum()+ getSymbols()+ getUpperCase();
+       }
+    }
+    else if(num1===true && symbols===true && upperCaseLetters===false && lowerCaseLetters===true) {
+       for(i=0; i< length1; i++){
+         finalPass= finalPass + getRandomNum()+ getSymbols()+getLowerCase();
+       }
+    }
+    else if(num1===false && symbols===true && upperCaseLetters===false && lowerCaseLetters===false) {
+       for(i=0; i< length1; i++){
+          finalPass= finalPass + getSymbols();
+       }
+    }
+    else if(num1===false && symbols===true && upperCaseLetters===true && lowerCaseLetters===false) {
+       for(i=0; i< length1; i++){
+          finalPass= finalPass + getSymbols() + getUpperCase();
+       }
+    }
+    else if(num1===true && symbols===true && upperCaseLetters===false && lowerCaseLetters===false) {
+       for(i=0; i< length1; i++){
+          finalPass= finalPass + getSymbols()+ getRandomNum();
+       }
+    }
+    else if(num1===true && symbols===false && upperCaseLetters===false && lowerCaseLetters===false) {
+       for(i=0; i< length1; i++){
+          finalPass= finalPass+getRandomNum();
+       }
+    }
+    else if(num1===false && symbols===false && upperCaseLetters===false && lowerCaseLetters===false) {
+      alert("Please choose atleast One Character")
+    }
+    else if(num1===false && symbols===false && upperCaseLetters===true && lowerCaseLetters===false) {
+       for(i=0; i< length1; i++){
+          finalPass= finalPass + getUpperCase();
+       }
+    }
+    else if(num1===true && symbols===false && upperCaseLetters===true && lowerCaseLetters===true) {
+       for(i=0; i< length1; i++){
+          finalPass= finalPass + getRandomNum()+ getUpperCase()+ getLowerCase();
+       }
     }
     // Password generator function?
     
