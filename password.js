@@ -5,7 +5,11 @@ document.getElementById("Generate").addEventListener("click",function(){
     var symbols = confirm("Do you want to use symbols?");
     var upperCaseLetters = confirm("Do you want to use upper case letters?");
     var lowerCaseLetters = confirm("Do you want to use lower case letters?");
-    finalPass=""; 
+    finalPass="";
+    if(length1<8 || length1>128){
+       alert("Please pick number between 8-128");
+    } 
+
     if(num1===true &&symbols===true && upperCaseLetters===true && lowerCaseLetters==true){
         for(i=0; i< length1; i++){
             finalPass= finalPass+getLowerCase()+getRandomNum()+getSymbols()+getUpperCase();
@@ -84,12 +88,13 @@ document.getElementById("Generate").addEventListener("click",function(){
           finalPass= finalPass + getRandomNum()+ getUpperCase()+ getLowerCase();
        }
     }
-    // Password generator function?
+   
     
-    
+   
     // console log test output
     var ultraFinal= finalPass.slice(0,length1);
-    console.log(ultraFinal);
+   // console.log(ultraFinal);
+   passwordEl.textContent = ultraFinal;
 
     // functions to get random values
         function getRandomNum(){
@@ -104,8 +109,22 @@ document.getElementById("Generate").addEventListener("click",function(){
            return upperCase2[Math.floor(Math.random()*upperCase2.length)];
         }
         function getSymbols(){
-           var symbol2 = ["~","!","#","$","%"];
+           var symbol2 = ["~","!","#","$","%","*","&","@"];
            return symbol2[Math.floor(Math.random()*symbol2.length)];
         }
 }
 );
+document.getElementById("Copy").addEventListener("click", function(){
+   var passwordText = document.getElementById("password").textContent;
+   var textArea = document.createElement("textarea");
+   //if(!passwordText){
+  //    return "";
+  // }
+   textArea.value = passwordText;
+   document.body.appendChild(textArea);
+   textArea.select();
+   document.execCommand('copy');
+   textArea.remove();
+   alert("password has been copied!")
+
+});
