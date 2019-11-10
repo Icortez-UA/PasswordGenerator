@@ -1,14 +1,17 @@
 document.getElementById("Generate").addEventListener("click",function(){
     var passwordEl = document.getElementById('password');
     var length1 = +prompt("Choose length of password 8-128?");
-    var num1 = confirm("Do you want to use numbers?")
-    var symbols = confirm("Do you want to use symbols?");
-    var upperCaseLetters = confirm("Do you want to use upper case letters?");
-    var lowerCaseLetters = confirm("Do you want to use lower case letters?");
     finalPass="";
     if(length1<8 || length1>128){
        alert("Please pick number between 8-128");
-    } 
+      } 
+      else{
+         var num1 = confirm("Do you want to use numbers?")
+         var symbols = confirm("Do you want to use symbols?");
+         var upperCaseLetters = confirm("Do you want to use upper case letters?");
+         var lowerCaseLetters = confirm("Do you want to use lower case letters?");
+
+    }
 
     if(num1===true &&symbols===true && upperCaseLetters===true && lowerCaseLetters==true){
         for(i=0; i< length1; i++){
