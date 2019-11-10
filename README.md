@@ -15,3 +15,8 @@ Once password is generated user has option to copy password to clipboard by clic
 This version uses confirm box to get essentially a yes or no from the user.<br>
 
 Future versions will use different methods to get the users input.
+<br>
+Here is a screenshot of The Password Generator!
+![password generator screenshot](assets/screenshot.PNG)
+
+Link to page here:https://icortez-ua.github.io/PasswordGenerator/
