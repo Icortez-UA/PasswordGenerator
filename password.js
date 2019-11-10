@@ -92,8 +92,8 @@ document.getElementById("Generate").addEventListener("click",function(){
     
    
     // console log test output
+    // console.log(ultraFinal);
     var ultraFinal= finalPass.slice(0,length1);
-   // console.log(ultraFinal);
    passwordEl.textContent = ultraFinal;
 
     // functions to get random values
@@ -117,9 +117,9 @@ document.getElementById("Generate").addEventListener("click",function(){
 document.getElementById("Copy").addEventListener("click", function(){
    var passwordText = document.getElementById("password").textContent;
    var textArea = document.createElement("textarea");
-   //if(!passwordText){
-  //    return "";
-  // }
+   if(!passwordText){
+     return "";
+   }
    textArea.value = passwordText;
    document.body.appendChild(textArea);
    textArea.select();
